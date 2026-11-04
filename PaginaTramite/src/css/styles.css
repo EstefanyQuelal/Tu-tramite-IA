@@ -1,0 +1,402 @@
+/* ===== Variables ===== */
+:root {
+  --negro: #1c1c1e;
+  --azul: #3b82f6;
+  --azul-oscuro: #1d4ed8;
+  --fondo: #e2e2e2;
+  --navy: #1e2a44;
+  --blanco: #ffffff;
+  --sombra-burbuja: #b9b9b9;
+  
+  --fuente-titulo: "Space Mono", monospace;
+  --fuente-texto: "Source Serif 4", serif;
+}
+
+/* ===== Base (diseño de referencia: iPad Pro 11" -> 834px) ===== */
+html, body {
+  margin: 0;
+  background: var(--fondo);
+  font-family: var(--fuente-texto);
+  color: #111;
+}
+
+.pagina {
+  width: 100%;
+  max-width: 834px;
+  margin: 0 auto;
+  background: var(--fondo);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Encabezado ===== */
+.encabezado {
+  height: 66px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  background: var(--negro);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.marca__logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.marca__nombre {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.boton-sesion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px 6px 6px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--azul);
+  color: var(--blanco);
+  font-family: var(--fuente-titulo);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.boton-sesion:hover { background: var(--azul-oscuro); }
+
+.boton-sesion__icono {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--blanco);
+  display: grid;
+  place-items: center;
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: 520px;
+  padding: 30px 40px;
+}
+
+.hero__robot {
+  position: absolute;
+  left: 34px;
+  top: 40px;
+  width: 320px;
+  height: auto;
+}
+
+/* Burbuja de diálogo */
+.burbuja {
+  position: absolute;
+  left: 410px;
+  top: 30px;
+  width: 380px;
+  box-sizing: border-box;
+  padding: 24px;
+  background: var(--blanco);
+  border: 3px solid var(--navy);
+  border-radius: 24px;
+  box-shadow: 0 6px 0 var(--sombra-burbuja);
+}
+
+.burbuja::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  bottom: -22px;
+  width: 24px;
+  height: 24px;
+  background: var(--blanco);
+  border-right: 3px solid var(--navy);
+  border-bottom: 3px solid var(--navy);
+  border-bottom-right-radius: 4px;
+  transform: skewX(30deg);
+}
+
+.burbuja__texto {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* Ventajas */
+.ventajas {
+  position: absolute;
+  right: 40px;
+  top: 360px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+
+.ventaja {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.ventaja__icono {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+/* ===== Secciones Nuevas ===== */
+.contenido-principal {
+  padding: 20px 30px;
+}
+
+.titulo-seccion {
+  font-family: var(--fuente-titulo);
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Trámites más consultados */
+.seccion-tramites {
+  margin-bottom: 35px;
+}
+
+.lista-tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tarjeta-tramite {
+  display: flex;
+  align-items: center;
+  background: var(--blanco);
+  padding: 16px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border: 1px solid #dcdcdc;
+  transition: transform 0.2s;
+}
+
+.tarjeta-tramite:hover {
+  transform: translateY(-2px);
+}
+
+.tarjeta-icono-placeholder {
+  font-size: 28px;
+  margin-right: 18px;
+}
+
+.tarjeta-info {
+  flex: 1;
+}
+
+.tarjeta-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tarjeta-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.flecha {
+  font-size: 24px;
+  color: #444;
+  font-weight: bold;
+}
+/* Contenedor en forma de cuadro para la sección de trámites */
+.caja-contenedor-tramites {
+  background: var(--blanco); 
+  border: 1px solid #dcdcdc;
+  border-radius: 16px;      
+  padding: 24px;            
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03); 
+}
+.caja-contenedor-tramites .titulo-seccion {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+/* Servicios Públicos */
+.seccion-servicios {
+  margin-bottom: 35px;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.servicio-caja {
+  background: var(--blanco);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+}
+
+.servicio-caja h3 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+}
+
+.servicio-caja p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Asistente Virtual Chatbox */
+.seccion-asistente {
+  margin-bottom: 40px;
+}
+
+.caja-chat {
+  background: var(--blanco);
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.chat-header {
+  background: #f7f7f7;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: var(--fuente-titulo);
+  font-size: 14px;
+}
+
+.chat-body {
+  padding: 30px 20px;
+  min-height: 140px;
+}
+
+.placeholder-chat {
+  color: #999;
+  font-size: 15px;
+  margin: 0;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 12px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  gap: 10px;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+}
+
+.chat-footer button {
+  background: var(--azul);
+  color: white;
+  border: none;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer / Pie de página */
+.footer {
+  background: var(--negro);
+  color: var(--blanco);
+  padding: 25px 30px;
+}
+
+.footer-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.footer-acciones {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-acciones a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #888;
+}
+
+.iconos-redes {
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+}
+
+/* ===== Estilos para los íconos de redes sociales ===== */
+.iconos-redes {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre cada ícono */
+}
+
+.iconos-redes a {
+  display: inline-block;
+  width: 24px;  /* Ancho fijo para el contenedor del ícono */
+  height: 24px; /* Alto fijo para el contenedor del ícono */
+}
+
+.iconos-redes img {
+  width: 100%;    /* Hace que la imagen ocupe exactamente el ancho del contenedor */
+  height: 100%;   /* Mantiene la proporción en altura */
+  object-fit: contain; /* Evita que la imagen se deforme */
+  display: block;
+}

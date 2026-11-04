@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu Trámite IA</title> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="src/css/normalize.css">
+  <link rel="stylesheet" href="src/css/styles.css">
+
+</head>
+
+<body>
+
+  <div class="pagina">
+    <!-- ENCABEZADO -->
+
+    <header class="encabezado">
+      <a class="marca" href="index.html">
+        <img class="marca__logo" src="src/Imagen2.png" alt="Logo de Tu Trámite IA">
+        <span class="marca__nombre">Tu Trámite IA</span>
+      </a>
+
+      <button class="boton-sesion" type="button" id="btnSesion">
+        <span class="boton-sesion__icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#111">
+            <circle cx="12" cy="8" r="4.2"/>
+            <path d="M3.5 21c0-4.6 3.8-7.5 8.5-7.5s8.5 2.9 8.5 7.5z"/>
+          </svg>
+
+        </span>
+        <span>Iniciar sesión</span>
+      </button>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="hero">
+      <img class="hero__robot" src="src/Imagen1.png" alt="Robot asistente virtual saludando">
+      <div class="burbuja">
+        <p class="burbuja__texto">
+          Hola!<br>
+          Soy tu asistente virtual.<br>
+          <strong>¿En qué puedo ayudarte hoy?</strong>
+        </p>
+      </div>
+
+      <ul class="ventajas">
+        <li class="ventaja">
+          <svg class="ventaja__icono" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 1 4 14h6l-1.5 9L20 9.5h-6.5z" fill="#111"/>
+          </svg>
+
+          <span>Respuestas<br>rápidas</span>
+        </li>
+        <li class="ventaja">
+          <svg class="ventaja__icono" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2 4 5v6c0 5 3.4 9.2 8 11 4.6-1.8 8-6 8-11V5z" fill="#9a9a9a" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="m8.5 12 2.4 2.4 4.6-4.8" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <span>Información<br>oficial</span>
+        </li>
+        <li class="ventaja">
+          <svg class="ventaja__icono" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="#9a9a9a" stroke="#111" stroke-width="1.5"/>
+            <path d="M12 6v6l4 2.5" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+
+          <span>Disponible<br>24/7</span>
+        </li>
+      </ul>
+    </main>
+
+      <!-- Trámites más consultados -->
+<!-- Trámites más consultados -->
+<section class="seccion-tramites">
+  <div class="caja-contenedor-tramites">
+    <h2 class="titulo-seccion">Trámites más consultados</h2>
+    <div class="lista-tarjetas">
+      
+      <a href="#" class="tarjeta-tramite">
+        <div class="tarjeta-icono-placeholder">📄</div>
+        <div class="tarjeta-info">
+          <h3>Cédula de identidad</h3>
+          <p>Consulta los requisitos, costos y pasos para renovar tu cédula.</p>
+        </div>
+        <span class="flecha">›</span>
+      </a>
+
+      <a href="#" class="tarjeta-tramite">
+        <div class="tarjeta-icono-placeholder">📑</div>
+        <div class="tarjeta-info">
+          <h3>Certificados</h3>
+          <p>Infórmate de cómo obtener certificados de nacimiento, matrimonio, etc.</p>
+        </div>
+        <span class="flecha">›</span>
+      </a>
+
+      <a href="#" class="tarjeta-tramite">
+        <div class="tarjeta-icono-placeholder">🚗</div>
+        <div class="tarjeta-info">
+          <h3>Licencias de conducir</h3>
+          <p>Revisa los requisitos y el proceso para obtener o renovar tu licencia.</p>
+        </div>
+        <span class="flecha">›</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+      <!-- Servicios Públicos -->
+      <section class="seccion-servicios">
+        <h2 class="titulo-seccion">Servicios Públicos</h2>
+        <div class="grid-servicios">
+          <div class="servicio-caja">
+            <h3>Identificación y registros</h3>
+            <p>Cédula, pasaporte y registros civiles.</p>
+          </div>
+          <div class="servicio-caja">
+            <h3>Salud</h3>
+            <p>Afiliación, citas y servicios de salud.</p>
+          </div>
+          <div class="servicio-caja">
+            <h3>Educación</h3>
+            <p>Matrículas, títulos y becas.</p>
+          </div>
+          <div class="servicio-caja">
+            <h3>Obras Públicas</h3>
+            <p>Agua potable, luz eléctrica, transporte, etc.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Asistente Virtual Interactivo -->
+      <section class="seccion-asistente">
+        <div class="caja-chat">
+          <div class="chat-header">
+            <span>🤖 Asistente virtual</span>
+          </div>
+          <div class="chat-body">
+            <p class="placeholder-chat">Escribe tu consulta</p>
+          </div>
+          <div class="chat-footer">
+            <input type="text" placeholder="Ej: ¿Qué requisitos necesito para renovar mi cédula?">
+            <button type="button">Enviar</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+      <div class="footer-superior">
+        <div class="usuario-info">👤 <span>Usuario<br>Verificado</span></div>
+        <div class="footer-acciones">
+          <a href="#">⚙️ Configuración</a>
+          <a href="#">❓ Ayuda</a>
+        </div>
+      </div>
+      <div class="redes-sociales">
+        <span>Redes Sociales</span>
+        <div class="iconos-redes">
+          ><a href="#" aria-label="Facebook"><img src="src/Facebook.png" alt="Facebook"></a>
+          <a href="#" aria-label="Twitter"><img src="src/Twitter.png" alt="Twitter"></a>
+          <a href="#" aria-label="Instagram"><img src="src/Instagram.png" alt="Instagram"></a>
+          <a href="#" aria-label="YouTube"><img src="src/YouTube.png" alt="YouTube"></a>
+          <a href="#" aria-label="TikTok"><img src="src/TikTok.png" alt="TikTok"></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="src/js/main.js"></script>
+</body>
+</html>
